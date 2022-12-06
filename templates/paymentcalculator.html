@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body class="flex_center">
+    <p class="information">Welcome to my payment calculator! Instructions: <br>1. Enter loan amount <br>2. Enter interest amount <br>3. Enter loan term
+        <br>(Enable dark mode with the switch)
+    </p>
+    <section class="center max-width margin-top">
+        <div class="container position_relative">
+            <label class="theme">
+                <input class="switchBox switch" type="checkbox" checked>
+                <span class="slider round"></span>
+              </label>
+            <h1>Payment Calculator</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Loan Amount</td>
+                        <td><input type="number" id="amount" placeholder="Enter Amount" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Interest Rate</td>
+                        <td><input type="number" id="interest" placeholder="Enter Interest" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Loan Term</td>
+                        <td><input type="number" id="years" placeholder="Enter Years" value="" ></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="right">
+                            <button class="btn-primary btn-calculate" id="calculate">Calculate</button>
+                            <button class="btn-secondary btn-clear" id="clear">Clear</button>
+                        </td>   
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="margin-top">
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monthly Payment</th>
+                        <th>Total Payment</th>
+                        <th>Total Interest</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="results-tr">
+                        <td align="center" class=results></td>
+                        <td align="center" class=results></td>
+                        <td align="center" class=results></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+<script src="{% static 'js/index.js' %}"></script>
+
+</body>
+
+</html>
